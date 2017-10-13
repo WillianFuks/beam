@@ -85,12 +85,17 @@ cell (TableFieldSchema). The terms field and cell are used interchangeably.
 
 TableSchema: Describes the schema (types and order) for values in each row.
   Has one attribute, 'field', which is list of TableFieldSchema objects.
+  For a general overview on how to define schemas:
+  https://cloud.google.com/bigquery/docs/schemas
 
 TableFieldSchema: Describes the schema (type, name) for one field.
   Has several attributes, including 'name' and 'type'. Common values for
   the type attribute are: 'STRING', 'INTEGER', 'FLOAT', 'BOOLEAN'. All possible
-  values are described at:
-  https://cloud.google.com/bigquery/preparing-data-for-bigquery#datatypes
+  values for Standard SQL are described here:
+  https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types
+  
+  And for Legacy SQL:
+  https://cloud.google.com/bigquery/data-types
 
 TableRow: Holds all values in a table row. Has one attribute, 'f', which is a
   list of TableCell instances.
